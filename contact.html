@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARK | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .contact-form {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 4rem;
+            border-radius: 40px;
+            border: 1px solid var(--glass-border);
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(20px);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 1.2rem;
+            border-radius: 15px;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 15px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 0 30px var(--primary-glow);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">STARK<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">PRODUIT</a></li>
+                <li><a href="docs.html">DOCUMENTATION</a></li>
+                <li><a href="index.html#download" class="btn-nav">TÉLÉCHARGER</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="docs-main animate-in" style="padding-top: 220px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 5rem; font-weight: 900; margin-bottom: 1rem;">ENTRER EN <span
+                    class="text-gradient">CONTACT</span></h1>
+            <p style="color: var(--text-dim); margin-bottom: 4rem;">Une assistance de niveau ingénieur vous attend.</p>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>NOM COMPLET</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type="email" placeholder="john@stark.com">
+                </div>
+                <div class="form-group">
+                    <label>MESSAGE</label>
+                    <textarea rows="5" placeholder="Votre message..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">ENVOYER LE SIGNAL</button>
+            </form>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">STARK<span>.</span></div>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h4>PRODUIT</h4>
+                <ul>
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#download">Téléchargement</a></li>
+                    <li><a href="updates.html">Mises à jour</a></li>
+                    <li><a href="security.html">Sécurité</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>RESSOURCES</h4>
+                <ul>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="api.html">API Reference</a></li>
+                    <li><a href="community.html">Communauté</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>LÉGAL</h4>
+                <ul>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="tos.html">CGU</a></li>
+                    <li><a href="licenses.html">Licences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

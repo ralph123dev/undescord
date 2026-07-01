@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARK | Documentation Officielle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="docs-page">
+    <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob blob-2" style="background: var(--secondary); bottom: -100px; right: -100px;"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">STARK<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">PRODUIT</a></li>
+                <li><a href="docs.html" class="active">DOCUMENTATION</a></li>
+                <li><a href="index.html#download" class="btn-nav">TÉLÉCHARGER</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="docs-main animate-in" style="padding-top: 220px; max-width: 1000px; margin: 0 auto;">
+        <div class="container">
+            <h1 class="docs-title"
+                style="font-size: 5rem; font-weight: 900; margin-bottom: 4rem; letter-spacing: -2px;">DOCUMENTATION
+                <span class="text-gradient">STARK</span>
+            </h1>
+
+            <section class="docs-section" style="margin-bottom: 100px;">
+                <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 2rem;">1. ARCHITECTURE KERNEL</h2>
+                <p style="font-size: 1.2rem; line-height: 2; color: var(--text-dim);">Stark opère au plus proche du
+                    matériel. Sur Windows, il accède aux API DirectStorage et aux gestionnaires de mémoire système pour
+                    compresser les pages de RAM inactives sans interrompre les processus en cours.</p>
+                <div class="info-box"
+                    style="margin-top: 2.5rem; padding: 3rem; background: rgba(0, 242, 255, 0.05); border-left: 5px solid var(--primary); border-radius: 20px;">
+                    <strong style="font-size: 1.3rem; display: block; margin-bottom: 1rem;">PROTOCOLE
+                        D'OPTIMISATION</strong>
+                    Notre moteur réduit la latence d'entrée/sortie de 35% en redirigeant les fichiers temporaires vers
+                    des buffers optimisés.
+                </div>
+            </section>
+
+            <section class="docs-section" style="margin-bottom: 100px;">
+                <h2
+                    style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 2rem; filter: drop-shadow(0 0 10px var(--secondary-glow));">
+                    2. COMPATIBILITÉ LINUX EXPERT</h2>
+                <p style="font-size: 1.2rem; line-height: 2; color: var(--text-dim); margin-bottom: 3rem;">Pour les
+                    utilisateurs de Linux, Stark ne nécessite pas d'exécution de code externe. Les fonctionnalités sont
+                    implémentées via les protocoles standard du noyau Linux (VFS et VM).</p>
+
+                <div class="terminal-container" style="background: #000; padding: 0.5rem; border-radius: 30px;">
+                    <div class="terminal-header">Stark CLI Reference</div>
+                    <div class="terminal-body" style="font-size: 1.1rem; padding: 3rem;">
+                        <div class="command-group">
+                            <span class="comment" style="color: #666;"># Étape 1 : Libération forcée du buffer
+                                cache</span><br>
+                            <code>sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches</code>
+                        </div>
+                        <br>
+                        <div class="command-group">
+                            <span class="comment" style="color: #666;"># Étape 2 : Nettoyage atomique des pilotes USB
+                                legacy</span><br>
+                            <code>sudo wipefs -a /dev/sdb</code>
+                        </div>
+                        <br>
+                        <div class="command-group">
+                            <span class="comment" style="color: #666;"># Étape 3 : Reconstruction du système de fichiers
+                                (FAT32)</span><br>
+                            <code>sudo mkfs.fat -F 32 /dev/sdb1</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section" style="margin-bottom: 100px;">
+                <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 2rem;">3. SÉCURITÉ DES DONNÉES</h2>
+                <div class="warning-box"
+                    style="padding: 3rem; background: rgba(255, 59, 48, 0.05); border-left: 5px solid #ff3b30; border-radius: 20px;">
+                    <strong style="font-size: 1.3rem; display: block; margin-bottom: 1rem; color: #ff3b30;">ATTENTION :
+                        OPÉRATIONS CRITIQUES</strong>
+                    Le formatage USB est une opération irréversible. Stark utilise des algorithmes de destruction de
+                    résidus magnétiques conformes aux normes de sécurité logicielle.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand" data-aos="fade-up">
+                <div class="footer-logo">STARK<span>.</span></div>
+                <p class="brand-desc">Le standard industriel pour l'optimisation système de nouvelle génération.
+                    Performance, sécurité et contrôle absolu.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link" title="Github"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-link" title="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="100">
+                <h4>PRODUIT</h4>
+                <ul>
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#download">Téléchargement</a></li>
+                    <li><a href="updates.html">Mises à jour</a></li>
+                    <li><a href="security.html">Sécurité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="200">
+                <h4>RESSOURCES</h4>
+                <ul>
+                    <li><a href="docs.html" class="active">Documentation</a></li>
+                    <li><a href="api.html">API Reference</a></li>
+                    <li><a href="community.html">Communauté</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="300">
+                <h4>LÉGAL</h4>
+                <ul>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="tos.html">CGU</a></li>
+                    <li><a href="licenses.html">Licences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="bottom-divider"></div>
+            <div class="bottom-flex">
+                <p>&copy; 2026 Stark Industries Global. Designé pour l'élite digitale.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">CORE SYSTEMS : OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

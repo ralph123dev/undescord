@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARK | Optimisation Système 3D</title>
+    <meta name="description"
+        content="Stark, l'outil ultime pour optimiser votre RAM et gérer vos clés USB sur Windows et Linux.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;805;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- 3D Decorative Background -->
+    <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">STARK<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">PRODUIT</a></li>
+                <li><a href="docs.html">DOCUMENTATION</a></li>
+                <li><a href="#download" class="btn-nav">TÉLÉCHARGER</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content animate-in">
+                <h1><span>SYSTÈME ULTIME</span>VITESSE<br><span class="text-gradient hero-gradient-text">ABSOLUE</span></h1>
+                <p>Libérez la puissance brute de votre machine avec Stark. Une optimisation de la mémoire vive sans
+                    compromis et une gestion USB de niveau industriel.</p>
+                <div class="hero-btns">
+                    <a href="#download" class="btn-primary">ESSAYER MAINTENANT</a>
+                    <a href="docs.html" class="btn-secondary">DÉCOUVRIR STARK</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-tilt>
+                <div class="main-card">
+                    <div class="stat-glow"></div>
+                    <div class="card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-row">
+                            <div class="stat-label">
+                                <span>MÉMOIRE RAM</span>
+                                <span class="ram-percent">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom: 3.5rem;">
+                            <div class="stat-label">
+                                <span>CACHE SYSTÈME</span>
+                                <span>18.4 GB</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%; background: var(--secondary);"></div>
+                            </div>
+                        </div>
+                        <button class="btn-optimize">NETTOYAGE PROFOND</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">PUISSANCE INGÉNIÉRE</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-tilt data-aos="fade-up">
+                    <span class="icon-3d">⚡</span>
+                    <h3>Turbo RAM</h3>
+                    <p>Compression intelligente et libération instantanée du cache processeur pour une latence zéro.</p>
+                </div>
+                <div class="feature-card" data-tilt data-aos="fade-up" data-aos-delay="200">
+                    <span class="icon-3d">🛠️</span>
+                    <h3>USB Kernel</h3>
+                    <p>Réinitialisation complète des pilotes USB et formatage bas-niveau pour les disques corrompus.</p>
+                </div>
+                <div class="feature-card" data-tilt data-aos="fade-up" data-aos-delay="400">
+                    <span class="icon-3d">🧬</span>
+                    <h3>Core Engine</h3>
+                    <p>Moteur ultra-léger développé en bas-niveau pour une empreinte système minimale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-container glass-morphism">
+                <h2 id="os-title" style="font-size: 3rem; margin-bottom: 2rem;">VÉRIFICATION SYSTÈME...</h2>
+                <div id="download-content">
+                    <!-- Dynamic -->
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand" data-aos="fade-up">
+                <div class="footer-logo">STARK<span>.</span></div>
+                <p class="brand-desc">Le standard industriel pour l'optimisation système de nouvelle génération.
+                    Performance, sécurité et contrôle absolu.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link" title="Github"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-link" title="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="100">
+                <h4>PRODUIT</h4>
+                <ul>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#download">Téléchargement</a></li>
+                    <li><a href="updates.html">Mises à jour</a></li>
+                    <li><a href="security.html">Sécurité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="200">
+                <h4>RESSOURCES</h4>
+                <ul>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="api.html">API Reference</a></li>
+                    <li><a href="community.html">Communauté</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="300">
+                <h4>LÉGAL</h4>
+                <ul>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="tos.html">CGU</a></li>
+                    <li><a href="licenses.html">Licences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="bottom-divider"></div>
+            <div class="bottom-flex">
+                <p>&copy; 2026 Stark Industries Global. Designé pour l'élite digitale.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">CORE SYSTEMS : OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARK | Mises à jour</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            min-width: 150px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .countdown-item:hover {
+            transform: scale(1.05) translateZ(30px);
+            border-color: var(--primary);
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+        }
+
+        .update-list {
+            max-width: 800px;
+            margin: 100px auto;
+        }
+
+        .update-entry {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary);
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">STARK<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">PRODUIT</a></li>
+                <li><a href="docs.html">DOCUMENTATION</a></li>
+                <li><a href="index.html#download" class="btn-nav">TÉLÉCHARGER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="docs-main animate-in" style="padding-top: 220px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 5rem; font-weight: 900; margin-bottom: 2rem;">PROCHAINE <span
+                    class="text-gradient">STARK V3.0</span></h1>
+            <p style="color: var(--text-dim); font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">Nos ingénieurs
+                travaillent actuellement sur le prochain déploiement majeur. Attendez-vous à une optimisation noyau
+                encore plus poussée.</p>
+
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">30</span>
+                    <span class="countdown-label">Jours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Heures</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Secondes</span>
+                </div>
+            </div>
+
+            <div class="update-list">
+                <h2 style="margin-bottom: 3rem;">HISTORIQUE DES MISES À JOUR</h2>
+                <div class="update-entry">
+                    <h3>STARK V2.8.5 (Actuelle)</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">Amélioration de la
+                        compression RAM et support étendu des drivers NVMe.</p>
+                </div>
+                <div class="update-entry">
+                    <h3>STARK V2.8.0</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">Refonte complète de
+                        l'interface graphique et module USB Kernel v2.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">STARK<span>.</span></div>
+                <p class="brand-desc">Le standard industriel pour l'optimisation système de nouvelle génération.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h4>PRODUIT</h4>
+                <ul>
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#download">Téléchargement</a></li>
+                    <li><a href="updates.html">Mises à jour</a></li>
+                    <li><a href="security.html">Sécurité</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="200">
+                <h4>RESSOURCES</h4>
+                <ul>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="api.html">API Reference</a></li>
+                    <li><a href="community.html">Communauté</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group" data-aos="fade-up" data-aos-delay="300">
+                <h4>LÉGAL</h4>
+                <ul>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="tos.html">CGU</a></li>
+                    <li><a href="licenses.html">Licences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div class="bottom-divider"></div>
+            <div class="bottom-flex">
+                <p>&copy; 2026 Stark Industries Global.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">CORE SYSTEMS : OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Countdown Logic (30 days from now)
+        function startCountdown() {
+            const countdownDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                const days = Math.floor(distance / (1000 * 64 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.querySelector(".countdown-container").innerHTML = "MISE À JOUR DISPONIBLE";
+                }
+            }, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+
+</html>
